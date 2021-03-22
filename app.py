@@ -14,11 +14,11 @@ from sqlalchemy import Column, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-TOKEN = "1312582932:AAGKZ3wEZSo_9nzb_TDRPQl7aVhPPIaDCis"
+TOKEN = ""
 
 app = Flask(__name__)
 #sslify = SSLify(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://shodqieclttuev:65c28597be559e4bf896c9c3a41456ba4c94e74036af5269ea5a4e076e9da768@ec2-52-71-107-99.compute-1.amazonaws.com:5432/d8d4359m0f53dj'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 #dev
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/lexus'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -34,7 +34,6 @@ class Userid(db.Model):
         self.user_id = user_id
 
 #https://api.telegram.org/bot1312582932:AAGKZ3wEZSo_9nzb_TDRPQl7aVhPPIaDCis/setWebhook?url=https://v4h4.pythonanywhere.com/
-#https://api.telegram.org/bot1312582932:AAGKZ3wEZSo_9nzb_TDRPQl7aVhPPIaDCis/setWebhook?url=https://ab2be63470db.ngrok.io/
 @app.route('/', methods=['POST','GET'])
 def index():
     if request.method == 'POST':
