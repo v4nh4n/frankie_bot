@@ -14,11 +14,11 @@ from sqlalchemy.orm import sessionmaker
 sched = BlockingScheduler()
 
 
-TOKEN = "1312582932:AAGKZ3wEZSo_9nzb_TDRPQl7aVhPPIaDCis"
+TOKEN = ""
 URL = f'https://api.telegram.org/bot{TOKEN}/'
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://shodqieclttuev:65c28597be559e4bf896c9c3a41456ba4c94e74036af5269ea5a4e076e9da768@ec2-52-71-107-99.compute-1.amazonaws.com:5432/d8d4359m0f53dj'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 #dev
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/lexus'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
